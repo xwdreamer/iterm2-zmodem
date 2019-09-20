@@ -3,7 +3,7 @@
 在mac、raspberrypi下，实现与服务器进行便捷的文件上传和下载操作
 
 
-# 步骤
+# 安装步骤
 
 ## Mac
 
@@ -48,6 +48,13 @@ chmod 777 /usr/local/bin/iterm2-*
 
 
 ## Raspberrypi
+
+### 方法一：命令行安装
+```
+sudo apt-get install lrzsz
+```
+
+### 方法二：源码安装
 
 pi@raspberrypi:/usr/local/bin/lrzsz-0.12.20
 ```
@@ -118,5 +125,27 @@ lrwxrwxrwx 1 root staff      3 Sep 20 18:05 sz -> lsz
 -rwxr-xr-x 1 root staff   5902 Jun 12 11:50 wsdump.py
 root@raspberrypi:/usr/local/bin#
 ```
+
+
+# 使用说明
+> 如果要是使用sz，rz，必须要使用item2当中的Default，然后通过这个命令窗口ssh到远程机器。如果item2配置了其他的profile name，通过其他的profile name连接过去的，需要对其他的profile name配置trigger。
+
+## 远程文件——>本地
+使用
+```
+sz filename
+```
+
+## 本地文件——>远程
+使用
+```
+rz 
+选择文件
+```
+
+
+
+
+
 
 
